@@ -7,11 +7,8 @@ import java.io.Serializable;
 
 @Data
 @Builder
-public class TRatesRequest implements Serializable {
+public class TRatesFilterRequest implements Serializable {
+    private String date;
     private Long brandId;
     private Long productId;
-    private String startDate;
-    private String endDate;
-    private Integer price;
-    private String currencyCode;
 }

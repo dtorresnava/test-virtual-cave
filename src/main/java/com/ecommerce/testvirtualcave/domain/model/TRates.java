@@ -1,5 +1,6 @@
 package com.ecommerce.testvirtualcave.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -18,8 +19,10 @@ public class TRates {
     @Column(name = "product_id")
     private Long productId;
     @Column(name = "start_date")
+    @JsonFormat(pattern="yyyy-MM-dd")
     private Date startDate;
     @Column(name = "end_date")
+    @JsonFormat(pattern="yyyy-MM-dd")
     private Date endDate;
     private Integer price;
     @Column(name = "currency_code")
