@@ -3,7 +3,6 @@ package com.ecommerce.testvirtualcave.controller;
 import com.ecommerce.testvirtualcave.domain.model.TRates;
 import com.ecommerce.testvirtualcave.model.Result;
 import com.ecommerce.testvirtualcave.model.request.TRatesFilterRequest;
-import com.ecommerce.testvirtualcave.model.request.TRatesPartialRequest;
 import com.ecommerce.testvirtualcave.model.request.TRatesRequest;
 import com.ecommerce.testvirtualcave.model.response.TRatesListResponse;
 import com.ecommerce.testvirtualcave.model.response.TRatesResponse;
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 @RequestMapping("/v1/t_rates")
@@ -43,6 +41,7 @@ public class TRatesController {
 
     @PostMapping()
     private ResponseEntity<TRates> insertTRates(@RequestBody TRatesRequest request) throws ParseException {
+
         TRates response = service.insertTrates(request);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

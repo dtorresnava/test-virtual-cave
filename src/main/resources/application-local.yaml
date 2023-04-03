@@ -8,7 +8,8 @@ spring:
   datasource:
     url: jdbc:h2:mem:mydb
     username: dtorres
-    password: dtorres
+    password:
+
     driverClassName: org.h2.Driver
   jpa:
     defer-datasource-initialization: true
